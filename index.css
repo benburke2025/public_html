@@ -13,6 +13,7 @@ h1 {
     background-color: white;
     border-radius: 10px;
     width: 50%;
+    padding: 10px;
     margin: auto;
 
 }
@@ -73,10 +74,12 @@ a:visited {
 
 .side-image {
 
+    background-image: url(images/sidebar-image.png);
     border: 1px black solid;
     width: 250px;
     height: 500px;
     margin-right: 15%;
     float: right;
+    transform: scale(1.15);
 
 }
