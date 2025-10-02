@@ -1,0 +1,79 @@
+body {
+
+    background-color: rgb(255, 206, 133);
+
+}
+
+.container {
+
+    margin: auto;
+    width: 1640;
+    height: 664;
+    transform: scale(0.75);
+
+}
+
+.image-header {
+
+    background-image: url(images/header-image.png);
+    width: 1640;
+    height: 664;
+
+}
+
+.navdiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: rgb(255, 188, 133);
+    border: 5px black solid;
+
+}
+
+.navbar li a {
+
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+.navbar li a:hover {
+
+    background-color: rgb(255, 143, 52);
+
+}
+
+
+p {
+
+    margin-right: 850px;
+    font-size: larger;
+}
+
+table,
+th {
+
+    border: 3px black solid;
+    border-collapse: collapse;
+
+}
+
+th {
+
+    width: 10%;
+
+}
