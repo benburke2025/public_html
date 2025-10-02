@@ -12,6 +12,7 @@ h1 {
 
 }
 
+
 table, th, td {
 
     text-align: center;
@@ -65,8 +66,12 @@ a:visited {
     color: darkblue;
 }
 
-p {
+.side-image {
 
+    border: 1px black solid;
+    width: 250px;
+    height: 500px;
     margin-right: 15%;
     float: right;
+
 }
