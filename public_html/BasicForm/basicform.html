@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Basic Forms Website</title>
+    <link href="mycss.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <script LANGUAGE=JavaScript>
+
+        function formValidation(form){
+
+            // var is a variable
+            var FirstName = form.fname.value;
+            var LastName = form.lname.value;
+            var Password = form.password.value;
+            var Email = form.email.value;
+            var CreditCardNum = form.creditcardnum.value;
+            var Auto = form.cars.value;
+
+            // what will happen when they click the submit button
+            var FirstLine = ("Welcome " + FirstName + " " + LastName + ", your password is " + Password);
+            FirstLine = FirstLine + (", your email is " + Email + ", your credit card number is " + CreditCardNum + ", and your car is a " + Auto + ".\n\n");
+
+            var Grade = form.grade.value;
+
+            var Vehicles = "";
+
+            // if and else statements just like in python
+            if(form.vehicle1.checked){
+                Vehicles = form.vehicle1.value;
+            }else{
+                Vehicles = "No Bike";
+            }
+
+            if(form.vehicle2.checked){
+                Vehicles = Vehicles + " " + form.vehicle2.value;
+            }else{
+                Vehicles = Vehicles + " No Car";
+            }
+
+            var Comment = form.message.value;
+
+            // this will also be displayed when the submit button is clicked
+            var SecondLine = ("You are in grade " + Grade + " your transportation is " + Vehicles + " and your comment was " + Comment);
+
+            // actally puts the alert on screen
+            alert(FirstLine + SecondLine);
+
+        } //end formValidation
+
+        function formCheckChange(form){
+
+            if(form.vehicle1.checked){
+                document.getElementById("freshman").checked = true;
+            }else{
+                document.getElementById("freshman").checked = false;
+            }
+
+            if(form.vehicle2.checked){
+                document.getElementById("senior").checked = true;
+            }else{
+                document.getElementById("senior").checked = false;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- holder for the entire form -->
+    <div class="formholder">
+
+        <!-- methon "post" basically means that no important info will be displayed in the url when the form is submitted -->
+        <form action="index.html" method="post">
+
+            <fieldset>
+
+                <!-- legend is just the heading for the form at the top of the form, label and input are used for the boxes than you can type into -->
+                <legend>My form:</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value="" size="30"><br><br>
+
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" value="" size="30"><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="" size="30"><br><br>
+
+                <label for="email1">Email:</label>
+                <input type="email" id="email1" name="email" value="" size="30"><br><br>
+
+                <label for="CreditCardNum">Credit Card Number:</label>
+                <input type="password" id="creditcardnum" name="password" value="" size="30"><br><br>
+
+                <!-- select however is used for a dropdown menu -->
+                <label for="cars">Choose a car:</label>
+                <select id="cars" name="cars">
+
+                    <option value="Lambo">Lambo</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="2009 Honda Civic">2009 Honda Civic</option>
+                    <option value="Aston Martin">Aston Martin</option>
+
+                </select> <br> <br>
+
+                <!-- this is now a mutiple choise menu where you can select an option for your answer -->
+                <input type="radio" id="freshman" name="grade" value="freshman" checked>
+                <label for="freshman">Freshman</label> <br>
+
+                <input type="radio" id="sophomore" name="grade" value="sophomore">
+                <label for="sophomore">Sophomore</label> <br>
+
+                <input type="radio" id="junior" name="grade" value="junior">
+                <label for="junior">Junior</label> <br>
+
+                <input type="radio" id="senior" name="grade" value="unc">
+                <label for="senior">Unc "senior"</label> <br> <br>
+
+                <!-- this is for a checkbox, so like a mutiple choise menu but you can select multiple options -->
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="formCheckChange(this.form)">
+                <label for="vehicle1"> I am rich and save money cause I have a bike</label> <br>
+
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" onclick="formCheckChange(this.form)">
+                <label for="vehicle2"> I am rich and have a car</label> <br> <br>
+
+                <!-- this is a box where people can write comments -->
+                <label for="w3review">Comments:</label>
+                <textarea id="message" name="message" rows="10" cols="50">This is NOT my comment!</textarea> <br> <br>
+
+                <!-- this is the submit button -->
+                <input type="submit" value="Submit" style="margin-left:300px;" onclick="formValidation(this.form)">
+                <br> <br>
+
+                <!-- this is some more button and the alert for said button -->
+                <button type="button" onclick="alert('Skye be like: Hi my name is Ben!')">DONT CLICK HERE!</button>
+                <button type="reset" value="Reset">Reset</button>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+    <br ><br> <br> <br> <br>
+
+</body>
+
+</html>
