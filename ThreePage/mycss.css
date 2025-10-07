@@ -1,0 +1,194 @@
+.red-body {
+
+    background-color: red;
+
+}
+
+.green-body {
+
+    background-color: green;
+
+}
+
+.blue-body {
+
+    background-color: rgb(0, 140, 255);
+
+}
+
+.red-navdiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.red-navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 172, 125);
+    width: 500;
+    justify-content: center;
+
+}
+
+.red-navbar li a {
+
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+.red-navbar li a:hover {
+
+    background-color: rgb(255, 202, 159);
+
+}
+
+.red-navbar li .red-link:visited {
+
+    color: rgb(255, 0, 204);
+
+}
+
+.red-backround {
+
+    background-image: url(images/red.jpg);
+    background-attachment: fixed;
+    margin: auto;
+    width: 80%;
+    height: 60%;
+
+}
+
+.red-heading {
+
+    margin: 10px;
+    text-align: center;
+
+}
+
+.green-navdiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.green-navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 209, 3);
+    width: 317;
+    justify-content: center;
+
+}
+
+.green-navbar li a {
+
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+.green-navbar li a:hover {
+
+    background-color: rgb(133, 255, 133);
+
+}
+
+.green-navbar li .green-link:visited {
+
+    color: rgb(255, 0, 0);
+
+}
+
+.green-backround {
+
+    background-image: url(images/green.jpg);
+    background-attachment: fixed;
+    margin: auto;
+    width: 80%;
+    height: 60%;
+
+}
+
+.green-heading {
+
+    margin: 10px;
+    text-align: center;
+
+}
+
+.blue-navdiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blue-navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(87, 154, 255);
+    width: 317;
+    justify-content: center;
+
+}
+
+.blue-navbar li a {
+
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+.blue-navbar li a:hover {
+
+    background-color: rgb(177, 170, 255);
+
+}
+
+.blue-navbar li .blue-link:visited {
+
+    color: rgb(255, 247, 0);
+
+}
+
+.blue-backround {
+
+    background-image: url(images/blue.jpg);
+    background-attachment: fixed;
+    margin: auto;
+    width: 80%;
+    height: 60%;
+
+}
+
+.blue-heading {
+
+    margin: 10px;
+    text-align: center;
+
+}
