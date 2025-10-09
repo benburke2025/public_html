@@ -1,81 +1,98 @@
 body {
-
-    background-color: rgb(255, 206, 133);
-
+    background-color: rgb(0, 125, 106);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-
     margin: auto;
-    width: 1640;
-    height: 664;
-    transform: scale(0.75);
+    width: 1000px;
+}
 
+.main {
+    background-color: hsl(130, 100%, 84%);
+    overflow: hidden;
 }
 
 .image-header {
-
-    background-image: url(images/header-image.png);
-    width: 1640;
-    height: 664;
-
+    background-image: url(images/NewFivePageHeaderImage.png);
+    width: 1000px;
+    height: 350px;
 }
 
 .navdiv {
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transform: scale(0.75);
 }
 
 .navbar {
-
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     justify-content: center;
-    background-color: rgb(255, 188, 133);
+    background-color: hsl(130, 55%, 56%);
     border: 5px black solid;
-
 }
 
 .navbar li a {
-
     display: block;
     color: rgb(0, 0, 0);
     padding: 15px 20px;
     text-decoration: underline;
     font-size: 30px;
-
 }
 
 .navbar li a:hover {
+    background-color: hsl(130, 43%, 46%);
+}
 
-    background-color: rgb(255, 143, 52);
+.left-side {
+    float: left;
+    width: 67%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+}
+
+.right-side {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(../images/sidebar-image.png);
+    height: 500px;
+    background-repeat: no-repeat;
 
 }
 
+.clearfix {
 
-p {
-
-    margin-right: 850px;
-    font-size: larger;
-}
-
-table,
-th {
-
-    border: 3px black solid;
-    border-collapse: collapse;
+    clear: both;
 
 }
 
-th {
+.footer {
+    background-color: hsl(130, 100%, 84%);
+    color: black;
+    font-size: 16px;
+    clear: both;
 
-    width: 10%;
+    width: 100%;
+    padding: 10px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-/* backround css rgb is (174, 225, 187) */
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
