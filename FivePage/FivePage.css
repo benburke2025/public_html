@@ -74,6 +74,14 @@ body {
 
 }
 
+.weight-lift-img {
+
+    background-image: url(images/weight-lifting.jpeg);
+    width: 300;
+    height: 300;
+    margin-left: 10%;
+}
+
 .right-side {
 
     float: right;
@@ -83,6 +91,14 @@ body {
     background-image: url(../images/sidebar-image.png);
     height: 500px;
     background-repeat: no-repeat;
+
+}
+
+.schedule, th, td{
+
+    border: 1px black solid;
+    border-collapse: collapse;
+
 
 }
 
