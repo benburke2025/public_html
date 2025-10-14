@@ -136,3 +136,40 @@ body {
     text-align: right;
 
 }
+
+.schedule, th, td {
+
+    border: 5px hsl(130, 100%, 84%) solid;
+
+}
+
+th, td {
+
+    padding: 10px;
+
+}
+
+.flex-lunch-table {
+
+    padding: 0;
+    border: 0px;
+
+}
+
+.lunch-flex-table, th, td {
+
+    margin: auto;
+
+}
+
+.green-day {
+
+    background-color: rgb(0, 196, 0);
+
+}
+
+.white-day {
+
+    background-color: white;
+
+}
