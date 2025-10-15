@@ -173,3 +173,12 @@ th, td {
     background-color: white;
 
 }
+
+.israel {
+
+    background-image: url(images/happy-merchant.jpg);
+    width: 300px;
+    height: 300px;
+    margin-left: 10%;
+
+}
