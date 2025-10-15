@@ -28,6 +28,12 @@ body {
 
 }
 
+.header-link {
+
+    color: black;
+    
+}
+
 .navdiv {
 
     display: flex;
