@@ -1,0 +1,189 @@
+<html>
+
+<head>
+
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="FivePageAnimated.css">
+
+    <script LANGUAGE="JavaScript">
+
+        function formValidation(form) {
+
+            var FirstName = form.fname.value;
+            var LastName = form.lname.value;
+            var Password = form.password.value;
+            var Email = form.email.value;
+            var CreditCardNum = form.creditcardnum.value;
+            var Auto = form.cars.value;
+
+            var FirstLine = ("Welcome " + FirstName + " " + LastName + ", your password is " + Password);
+            FirstLine = FirstLine + (", your email is " + Email + ", your credit card number is " + CreditCardNum + ", and your car is a " + Auto + ".\n\n");
+
+            var Grade = form.grade.value;
+
+            var Vehicles = "";
+
+            if (form.vehicle1.checked) {
+                Vehicles = form.vehicle1.value;
+            } else {
+                Vehicles = "No Bike";
+            }
+
+            if (form.vehicle2.checked) {
+                Vehicles = Vehicles + " " + form.vehicle2.value;
+            } else {
+                Vehicles = Vehicles + " No Car";
+            }
+
+            var Comment = form.message.value;
+
+            var SecondLine = ("You are in grade " + Grade + " your transportation is " + Vehicles + " and your comment was " + Comment);
+
+            alert(FirstLine + SecondLine);
+
+            window.location.href = "contact.html";
+
+            return false;
+
+        }
+
+        function formCheckChange(form) {
+
+            if (form.vehicle1.checked) {
+                document.getElementById("freshman").checked = true;
+            } else {
+                document.getElementById("freshman").checked = false;
+            }
+
+            if (form.vehicle2.checked) {
+                document.getElementById("senior").checked = true;
+            } else {
+                document.getElementById("senior").checked = false;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="image-header"></div>
+
+        <div class="main">
+
+            <div class="navdiv">
+
+                <nav class="navbar">
+
+                    <li><a class="home-link" href="home.html">Home</a></li>
+                    <li><a class="about-link" href="about.html">About</a></li>
+                    <li><a class="likes-link" href="likes.html">Likes</a></li>
+                    <li><a class="dislikes-link" href="dislikes.html">Dislikes</a></li>
+                    <li><a class="contact-link" href="contact.html">Contact</a></li>
+
+                </nav>
+
+            </div>
+
+            <div class="left-side">
+
+                <h1 style="margin-left: 10%;"><a class="header-link" href="../index.html">Contact Me</a></h1>
+
+                <div class="formholder">
+
+                    <form action="contact.html" method="post">
+
+                        <fieldset>
+
+                            <legend>My form:</legend>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname" value="" size="30"><br><br>
+
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname" value="" size="30"><br><br>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" value="" size="30"><br><br>
+
+                            <label for="email1">Email:</label>
+                            <input type="email" id="email1" name="email" value="" size="30"><br><br>
+
+                            <label for="CreditCardNum">Credit Card Number:</label>
+                            <input type="password" id="creditcardnum" name="password" value="" size="30"><br><br>
+
+                            <label for="cars">Choose a car:</label>
+                            <select id="cars" name="cars">
+
+                                <option value="Lambo">Lambo</option>
+                                <option value="Ferrari">Ferrari</option>
+                                <option value="2009 Honda Civic">2009 Honda Civic</option>
+                                <option value="Aston Martin">Aston Martin</option>
+
+                            </select> <br> <br>
+
+                            <input type="radio" id="freshman" name="grade" value="freshman" checked>
+                            <label for="freshman">Freshman</label> <br>
+
+                            <input type="radio" id="sophomore" name="grade" value="sophomore">
+                            <label for="sophomore">Sophomore</label> <br>
+
+                            <input type="radio" id="junior" name="grade" value="junior">
+                            <label for="junior">Junior</label> <br>
+
+                            <input type="radio" id="senior" name="grade" value="unc">
+                            <label for="senior">Unc "senior"</label> <br> <br>
+
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"
+                                onclick="formCheckChange(this.form)">
+                            <label for="vehicle1"> I am rich and save money cause I have a bike</label> <br>
+
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"
+                                onclick="formCheckChange(this.form)">
+                            <label for="vehicle2"> I am rich and have a car</label> <br> <br>
+
+                            <label for="w3review">Comments:</label>
+                            <textarea id="message" name="message" rows="10" cols="50">This is NOT my comment!</textarea>
+                            <br> <br>
+
+                            <input type="submit" value="Submit" style="margin-left:300px;"
+                                onclick="return formValidation(this.form);">
+                            <br> <br>
+
+                            <button type="button" onclick="alert('Skye be like: Hi my name is Ben!')">DONT CLICK
+                                HERE!</button>
+                                
+                            <button type="reset" value="Reset">Reset</button>
+
+                        </fieldset>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <br> <br> <br>
+
+            <div class="right-side-contact"></div>
+
+            <div class="clearfix"></div>
+
+            <br> <br>
+
+            <footer class="footer">
+
+                <div class="footer-left">&copy; 2025 Programming II</div>
+                <div class="footer-right">Developed by <a href="contact.html">bburke</a></div>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

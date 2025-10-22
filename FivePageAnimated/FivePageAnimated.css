@@ -1,0 +1,238 @@
+body {
+
+    background-color: rgb(0, 125, 106);
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+
+    margin: auto;
+    width: 1000px;
+
+}
+
+.main {
+
+    background-color: hsl(130, 100%, 84%);
+    overflow: hidden;
+
+}
+
+.image-header {
+
+    background-image: url(images/NewFivePageHeaderImage.png);
+    width: 1000px;
+    height: 350px;
+
+}
+
+.header-link {
+
+    color: black;
+    
+}
+
+.navdiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.75);
+
+}
+
+.navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: hsl(130, 55%, 56%);
+    border: 5px black solid;
+
+}
+
+.navbar li a {
+
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+.navbar li a:hover {
+
+    background-color: hsl(130, 43%, 46%);
+
+}
+
+.left-side {
+
+    float: left;
+    width: 67%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+
+}
+
+.weight-lift-img {
+
+    background-image: url(images/weight-lifting.jpeg);
+    width: 300;
+    height: 300;
+    margin-left: 10%;
+}
+
+.right-side-home {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(../images/sidebar-image.png);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-about {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/About-me-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-likes {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/likes-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-dislikes {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/dislikes-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-contact {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/contact-me-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.schedule, th, td{
+
+    border: 1px black solid;
+    border-collapse: collapse;
+
+
+}
+
+.clearfix {
+
+    clear: both;
+
+}
+
+.footer {
+
+    background-color: hsl(130, 100%, 84%);
+    color: black;
+    font-size: 16px;
+    clear: both;
+
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.footer-left {
+
+    text-align: left;
+
+}
+
+.footer-right {
+
+    text-align: right;
+
+}
+
+.schedule, th, td {
+
+    border: 5px hsl(130, 100%, 84%) solid;
+
+}
+
+th, td {
+
+    padding: 10px;
+
+}
+
+.flex-lunch-table {
+
+    padding: 0;
+    border: 0px;
+
+}
+
+.lunch-flex-table, th, td {
+
+    margin: auto;
+
+}
+
+.green-day {
+
+    background-color: rgb(0, 196, 0);
+
+}
+
+.white-day {
+
+    background-color: white;
+
+}
+
+.israel {
+
+    background-image: url(images/happy-merchant.jpg);
+    width: 300px;
+    height: 300px;
+    margin-left: 10%;
+
+}
