@@ -88,13 +88,61 @@ body {
     margin-left: 10%;
 }
 
-.right-side {
+.right-side-home {
 
     float: right;
     width: 27%;
     padding: 10px;
     background-color: hsl(130, 100%, 84%);
     background-image: url(../images/sidebar-image.png);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-about {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/About-me-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-likes {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/likes-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-dislikes {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/dislikes-sidebar.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
+.right-side-contact {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-color: hsl(130, 100%, 84%);
+    background-image: url(images/contact-me-sidebar.jpg);
     height: 500px;
     background-repeat: no-repeat;
 
