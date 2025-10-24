@@ -10,28 +10,90 @@ body {
 
     margin: auto;
     width: 1000px;
+    background-color: hsl(130, 100%, 84%);
+
+}
+
+.main-home {
+
+    overflow: hidden;
+    animation-name: mainFadeIn;
+    animation-duration: 2s;
 
 }
 
 .main {
 
-    background-color: hsl(130, 100%, 84%);
     overflow: hidden;
 
 }
 
 .image-header {
 
-    background-image: url(images/NewFivePageHeaderImage.png);
+    background-image: url(images/FivePageHeaderAnimated.png);
     width: 1000px;
     height: 350px;
+
+}
+
+.header-text {
+
+    padding: 80;
+
+}
+
+.h1-image-home {
+
+    font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 70;
+    color: black;
+    animation-name: headerProg2;
+    animation-duration: 2s;
+
+}
+
+.h1-image {
+
+    font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 70;
+    color: black;
+
+}
+
+.p-image-home {
+
+    font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 35;
+    color: black;
+    margin-left: 50px;
+    animation-name: headerBenBurke;
+    animation-duration: 2s;
+
+}
+
+.p-image {
+
+    font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 35;
+    color: black;
+    margin-left: 50px;
+
+}
+
+.index-link-header {
+
+    margin-left: 10%;
 
 }
 
 .header-link {
 
     color: black;
-    
+
 }
 
 .navdiv {
@@ -44,6 +106,27 @@ body {
 }
 
 .navbar {
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: hsl(130, 55%, 56%);
+    border: 5px black solid;
+
+}
+
+.navdiv-home {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.75);
+
+}
+
+.navbar-home {
 
     display: flex;
     list-style-type: none;
@@ -76,7 +159,6 @@ body {
     float: left;
     width: 67%;
     padding: 10px;
-    background-color: hsl(130, 100%, 84%);
 
 }
 
@@ -88,12 +170,22 @@ body {
     margin-left: 10%;
 }
 
+.right-side-static {
+
+    float: right;
+    width: 27%;
+    padding: 10px;
+    background-image: url(../images/sidebar-image.png);
+    height: 500px;
+    background-repeat: no-repeat;
+
+}
+
 .right-side-home {
 
     float: right;
     width: 27%;
     padding: 10px;
-    background-color: hsl(130, 100%, 84%);
     background-image: url(../images/sidebar-image.png);
     height: 500px;
     background-repeat: no-repeat;
@@ -105,7 +197,6 @@ body {
     float: right;
     width: 27%;
     padding: 10px;
-    background-color: hsl(130, 100%, 84%);
     background-image: url(images/About-me-sidebar.jpg);
     height: 500px;
     background-repeat: no-repeat;
@@ -117,7 +208,6 @@ body {
     float: right;
     width: 27%;
     padding: 10px;
-    background-color: hsl(130, 100%, 84%);
     background-image: url(images/likes-sidebar.jpg);
     height: 500px;
     background-repeat: no-repeat;
@@ -148,7 +238,9 @@ body {
 
 }
 
-.schedule, th, td{
+.schedule,
+th,
+td {
 
     border: 1px black solid;
     border-collapse: collapse;
@@ -191,13 +283,22 @@ body {
 
 }
 
-.schedule, th, td {
+.table-schedule {
+
+    margin-left: 10%;
+
+}
+
+.schedule,
+th,
+td {
 
     border: 5px hsl(130, 100%, 84%) solid;
 
 }
 
-th, td {
+th,
+td {
 
     padding: 10px;
 
@@ -210,7 +311,9 @@ th, td {
 
 }
 
-.lunch-flex-table, th, td {
+.lunch-flex-table,
+th,
+td {
 
     margin: auto;
 
@@ -234,5 +337,106 @@ th, td {
     width: 300px;
     height: 300px;
     margin-left: 10%;
+
+}
+
+.first-row-color {
+
+    background-color: hsl(130, 50%, 53%);
+
+}
+
+.light-grey-row {
+
+    background-color: rgb(180, 180, 180);
+
+}
+
+.grey-row {
+
+    background-color: grey;
+
+}
+
+.blank-box {
+
+    color: hsl(130, 100%, 84%);
+    background-color: hsl(130, 100%, 84%);
+
+}
+
+.block-1-2-4-height {
+
+    height: 90px;
+
+}
+
+.submit-button {
+
+    margin-left: 300px;
+
+}
+
+@keyframes headerProg2 {
+
+    0% {
+
+        transform: translateX(-100%);
+
+    }
+
+    100% {
+
+        transform: translateX(0%);
+
+    }
+
+}
+
+@keyframes headerBenBurke {
+
+    0% {
+
+        transform: translateX(100%);
+
+    }
+
+    100% {
+
+        transform: translateX(0%);
+
+    }
+
+}
+
+@keyframes mainFadeIn {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes navigationSlideUp {
+
+    0% {
+
+        transform: translateY(100%);
+
+    }
+
+    100% {
+
+        transform: translateY(0%);
+
+    }
 
 }

@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #f8e6ae;
+    color: #888;
+    background-image: url("images/swirl_pattern.png");
+}
+
+.page {
+    background-color: #fff;
+    padding: 20px 30px 30px 50px;
+    margin: 30px 100px 30px 30px;
+}
+
+.page h1 {
+    color: #55612d;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    background-color: #b1d33f;
+    margin: 0px 0px 20px -20px;
+    padding: 18px 0px 16px 30px;
+}
+
+.page h1::after {
+    content: '';
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: url(images/fold.gif) no-repeat 0 0;
+    position: absolute;
+    right: 0px;
+    bottom: -40px;
+}
+
+.page p {
+    line-height: 1.2em;
+}
+
+.page a {
+    color: #1badd2;
+    text-decoration: none;
+}
+
+.page ul {
+    margin: 0;
+    padding: 0;
+}
+
+.page li {
+    display: block;
+    position: relative;
+    padding: 2px 0px 8px 25px;
+}
+
+.page li::before {
+    content: '';
+    display: block;
+    background: url(images/arrow.png) no-repeat 0 0;
+    height: 12px;
+    width: 30px;
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    background-size: 20px 8px;
+}
