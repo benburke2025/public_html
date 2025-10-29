@@ -73,6 +73,8 @@ abbr {
 .page-wrapper {
 
     position: relative;
+    width: 1300px;
+    margin: auto;
 
 }
 
@@ -80,6 +82,7 @@ abbr {
 section.intro {
 
     position: relative;
+    border: 1px black solid;
 
 }
 
