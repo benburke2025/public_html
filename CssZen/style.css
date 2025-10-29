@@ -1,0 +1,139 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+
+/* Not all elements are defined in this file, so you'll most likely want to refer to the index.html as well. */
+
+/************************************************** 
+Student Name: Ben Burke
+Date of Project: 10/27/25
+
+Start Mr. Reynolds' Directions:
+Make sure you list your color palette colors in the comment below.
+
+You do not have to comment the HTML, but every block of CSS on this page needs to commented even stuff that is already here that you don't use.  If you don't need it and don't want to comment it delete it. But if it is here is needs to be commented.  
+
+Formatting, make sure all your CSS is uniformly indented
+throughout the entire style sheet.  
+
+You need to set fonts and I will search for that, you need more than one image.
+
+You need some kind of special effect, JavaScript or CSS Animation.
+Make sure you incorporate C.R.A.P into your design. 
+***************************************************/
+
+/*  My Primary color for my palette is: #, my secondary colors are: #ff8c00 */
+
+/*all HTML tags are by default position: relative*/
+/*their position is relative to the other tags around them*/
+/*I am placing this default command in every block so the IDE does not highlight the command for being empty*/
+/*Delete this command from the blocks when you put your own commands in*/
+html {
+
+    position: relative;
+
+}
+
+body {
+
+    position: relative;
+
+}
+
+/*will style all your a tags*/
+a:link {
+
+    color: #B7A5DF;
+
+}
+
+/*will control what happens on a hover of a tags*/
+a:hover {
+
+    position: relative;
+
+}
+
+/*something like this control what to a tags only in the .sidebar*/
+.sidebar a:link {
+
+    position: relative;
+
+}
+
+/*this tag puts a dotted underline under text*/
+abbr {
+
+    /*border-bottom: none;*/
+    position: relative;
+
+}
+
+/*surrounds entire site except exta divs*/
+.page-wrapper {
+
+    position: relative;
+
+}
+
+/*surrounds header, .summary, .preamble*/
+section.intro {
+
+    position: relative;
+
+}
+
+header {
+
+    position: relative;
+
+}
+
+header h1 {
+
+    position: relative;
+
+}
+
+header h2 {
+
+    position: relative;
+
+}
+
+/*surrounds .explanation .participation .benefits .requirements footer*/
+div.main {
+
+    position: relative;
+
+}
+
+/*These are all your major sub-elements, you can give a whole group of classes commands by grouping them separated by , */
+/*You can get more specific by styling the <p> tags or the <h3> tags or a specific <p> tag with a command like*/
+/*suppary p would style every <p> inside of summary */
+header,
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements,
+footer {
+
+    position: relative;
+
+}
+
+/*There are 6 extras at the very bottom of the page*/
+.extra1 {
+
+    /*code below will place element at top of page*/
+    /*
+  position:absolute;
+  top:0px;
+  width:image width;
+  height:image height;
+  */
+    position: relative;
+
+}

@@ -170,6 +170,12 @@ body {
     margin-left: 10%;
 }
 
+.weight-lift-img:hover {
+
+    background-image: url(images/food.jpg);
+
+}
+
 .right-side-static {
 
     float: right;
@@ -333,7 +339,6 @@ td {
 
 .israel {
 
-    background-image: url(images/happy-merchant.jpg);
     width: 300px;
     height: 300px;
     margin-left: 10%;
