@@ -31,62 +31,57 @@ Make sure you incorporate C.R.A.P into your design.
 
 
 
-/* body, backround image set so it will not repeat and it is fixed in one position, so if the user scrolls, it will stay there. */
+/* body, background image set so it will not repeat and it is fixed in one position */
 body {
-
     position: relative;
     background-image: url(images/CSSZenBackround.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
-/*will style all your a tags*/
+/* style all links */
 a:link {
-
-    color: #B7A5DF;
-
+    color: #300097;
 }
 
-
-/*surrounds entire site except exta divs with custom width set for margins*/
+/* surrounds entire site except extra divs with custom width set for margins */
 .page-wrapper {
-
     position: relative;
     width: 1700px;
     margin: auto;
-    padding-top: 150px;
-
+    margin-top: 150px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* the heading at the top of the page with a width of 800px */
 header {
-
     position: relative;
     width: 800px;
     margin: auto;
-
 }
 
-/* the first block of the heading, the a shadow and custom font and a curved circular border. */
+/* the first block of the heading */
 header h1 {
-
     position: relative;
     box-shadow: 2px 2px 5px 1px black;
     text-align: center;
     font-size: 5em;
     font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
     font-weight: 900;
-    font-size: 70;
     color: black;
     background-color: rgb(224, 255, 166);
     border-radius: 20px;
-    
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0s;
+
 }
 
-/* the second block of the heading, much of the same as the first exept smaller */
+/* the second block of the heading */
 header h2 {
-
     position: relative;
     box-shadow: 2px 2px 5px 1px black;
     text-align: center;
@@ -98,28 +93,37 @@ header h2 {
     border-radius: 20px;
     width: 500px;
     margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
 
 }
 
-/* The short little summery after the heading, adds a little padding for space */
-.summary {
+.summary,
+.preamble,
+.main,
+.sidebar,
+footer {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 3s;
+}
 
+
+/* The short little summary after the heading */
+.summary {
     position: relative;
     padding-bottom: 50px;
     margin: auto;
-
 }
 
-/* adjusting the font size of the summery */
+/* adjusting the font size of the summary */
 .summary p {
-
     text-align: center;
     font-size: 2em;
-
 }
 
-
-/* the main dropdown preamble section with background color, border, padding and height */
+/* main dropdown preamble section */
 #zen-preamble {
     background-color: #F54927E6;
     border: 2px solid black;
@@ -133,8 +137,7 @@ header h2 {
     cursor: pointer;
 }
 
-/* the heading inside the preamble with font settings, color and text shadow */
-#zen-preamble > h3 {
+#zen-preamble>h3 {
     font-size: 2.5em;
     color: black;
     text-align: center;
@@ -143,26 +146,23 @@ header h2 {
     margin-top: 0;
 }
 
-/* effect when hovering over the preamble, expands height and changes background color */
 #zen-preamble:hover {
     max-height: 1000px;
     background-color: #F54927;
 }
 
-/* paragraphs inside the preamble, initially hidden for fade-in effect */
-#zen-preamble > p {
+#zen-preamble>p {
     opacity: 0;
     text-align: center;
     transition: opacity 0.4s ease;
 }
 
-/* paragraphs fade in when hovering over the preamble */
 #zen-preamble:hover p {
     opacity: 1;
 }
 
-/* each supporting block with background, border, padding, and hover transition */
-#zen-supporting > div {
+/* supporting blocks */
+#zen-supporting>div {
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid black;
     border-radius: 15px;
@@ -174,8 +174,7 @@ header h2 {
     cursor: pointer;
 }
 
-/* headings inside the supporting blocks with font settings, color, and shadow */
-#zen-supporting > div h3 {
+#zen-supporting>div h3 {
     font-size: 1.5em;
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -183,24 +182,21 @@ header h2 {
     margin-top: 0;
 }
 
-/* hover effect for supporting blocks, expands height and changes background */
-#zen-supporting > div:hover {
+#zen-supporting>div:hover {
     max-height: 1000px;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* paragraphs inside supporting blocks, initially hidden for fade-in effect */
-#zen-supporting > div p {
+#zen-supporting>div p {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
-/* paragraphs fade in when hovering over supporting blocks */
-#zen-supporting > div:hover p {
+#zen-supporting>div:hover p {
     opacity: 1;
 }
 
-/* ensures consistent box-sizing for layout blocks */
+/* ensure consistent box-sizing for layout blocks */
 #zen-explanation,
 #zen-participation,
 #zen-benefits,
@@ -208,7 +204,7 @@ header h2 {
     box-sizing: border-box;
 }
 
-/* first row layout, explanation section floated left with width and margin */
+/* first and second row layouts */
 #zen-explanation {
     float: left;
     width: 48%;
@@ -216,14 +212,12 @@ header h2 {
     clear: both;
 }
 
-/* first row layout, participation section floated right with width and margin */
 #zen-participation {
     float: right;
     width: 48%;
     margin-right: 2%;
 }
 
-/* second row layout, benefits section floated left with width and margin */
 #zen-benefits {
     float: left;
     width: 48%;
@@ -231,20 +225,21 @@ header h2 {
     clear: both;
 }
 
-/* second row layout, requirements section floated right with width and margin */
 #zen-requirements {
     float: right;
     width: 48%;
     margin-right: 2%;
+    margin-bottom: 60px;
 }
 
-/* font size and alignment for paragraphs inside preamble and supporting blocks */
-#zen-supporting > div p, #zen-preamble > p {
+/* text size and alignment for content paragraphs */
+#zen-supporting>div p,
+#zen-preamble>p {
     font-size: 1.3em;
     text-align: center;
 }
 
-/* footer styling with width, margin, background color, padding, and border radius */
+/* footer styling */
 footer {
     clear: both;
     width: 30%;
@@ -253,9 +248,10 @@ footer {
     background-color: rgba(255, 244, 124, 0.851);
     padding: 15px 0;
     border-radius: 10px;
+    transform: translateY(150px);
 }
 
-/* styling links inside the footer with padding, color, font, and hover effect */
+/* footer links */
 footer a {
     display: inline-block;
     margin: 0 10px;
@@ -268,9 +264,8 @@ footer a {
     transition: background-color 0.3s;
 }
 
-/* hover effect for footer links */
 footer a:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* clearfix for the page wrapper */
@@ -280,7 +275,27 @@ footer a:hover {
     clear: both;
 }
 
-/* main design sections floated left with font size, margin, background, and border radius */
+/* semi-transparent light grey background under all content */
+.page-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(220, 220, 220, 0.5);
+    z-index: 0;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* ensure content sits above the background overlay */
+.page-wrapper>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* main design sections */
 #design-selection,
 #design-archives,
 #zen-resources {
@@ -291,29 +306,27 @@ footer a:hover {
     text-align: center;
     background-color: #3498db80;
     border-radius: 30px;
+    margin-top: 150px;
 }
 
-/* design selection block with padding and width */
 #design-selection {
     padding-top: 1em;
     width: 60%;
 }
 
-/* design archives block with padding and width */
 #design-archives {
     text-align: center;
     padding: 1em;
     width: 20%;
 }
 
-/* resources block with padding and width */
 #zen-resources {
     text-align: center;
     padding: 1em;
     width: 20%;
 }
 
-/* remove default list styling from design and resource lists */
+/* remove list styling */
 #design-selection ul,
 #design-archives ul,
 #zen-resources ul {
@@ -322,18 +335,16 @@ footer a:hover {
     padding: 0;
 }
 
-/* spacing between list items in design selection */
 #design-selection ul li {
     margin-bottom: 0.5em;
 }
 
-/* spacing between list items in archives and resources */
 #design-archives ul li,
 #zen-resources ul li {
     margin-bottom: 1em;
 }
 
-/* links inside lists with block display, color, padding, and border radius */
+/* list link styles */
 #design-selection ul li a,
 #design-archives ul li a,
 #zen-resources ul li a {
@@ -345,7 +356,6 @@ footer a:hover {
     transition: background-color 0.3s;
 }
 
-/* hover effect for links inside lists */
 #design-selection ul li a:hover,
 #design-archives ul li a:hover,
 #zen-resources ul li a:hover {
@@ -356,4 +366,19 @@ footer a:hover {
 .page-wrapper {
     position: relative;
     margin-bottom: 3em;
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+        
+    }
 }
