@@ -368,6 +368,7 @@ footer a:hover {
     margin-bottom: 3em;
 }
 
+/* this code is for the animation at the start of the page opening, any code that has the animation name fadeIn will have this effect. */
 @keyframes fadeIn {
 
     from {
