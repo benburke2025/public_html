@@ -22,18 +22,16 @@ You need some kind of special effect, JavaScript or CSS Animation.
 Make sure you incorporate C.R.A.P into your design. 
 ***************************************************/
 
-/*  My Primary color for my palette is: #, my secondary colors are: #ff8c00 */
+/*  My Primary color for my palette is: #F54927, my secondary colors are: #27F52E, #09C810, #E83A00 */
 
 /*all HTML tags are by default position: relative*/
 /*their position is relative to the other tags around them*/
 /*I am placing this default command in every block so the IDE does not highlight the command for being empty*/
 /*Delete this command from the blocks when you put your own commands in*/
-html {
 
-    position: relative;
 
-}
 
+/* body, backround image set so it will not repeat and it is fixed in one position, so if the user scrolls, it will stay there. */
 body {
 
     position: relative;
@@ -50,29 +48,8 @@ a:link {
 
 }
 
-/*will control what happens on a hover of a tags*/
-a:hover {
 
-    position: relative;
-
-}
-
-/*something like this control what to a tags only in the .sidebar*/
-.sidebar a:link {
-
-    position: relative;
-
-}
-
-/*this tag puts a dotted underline under text*/
-abbr {
-
-    /*border-bottom: none;*/
-    position: relative;
-
-}
-
-/*surrounds entire site except exta divs*/
+/*surrounds entire site except exta divs with custom width set for margins*/
 .page-wrapper {
 
     position: relative;
@@ -82,13 +59,7 @@ abbr {
 
 }
 
-/*surrounds header, .summary, .preamble*/
-section.intro {
-
-    position: relative;
-
-}
-
+/* the heading at the top of the page with a width of 800px */
 header {
 
     position: relative;
@@ -97,6 +68,7 @@ header {
 
 }
 
+/* the first block of the heading, the a shadow and custom font and a curved circular border. */
 header h1 {
 
     position: relative;
@@ -112,6 +84,7 @@ header h1 {
     
 }
 
+/* the second block of the heading, much of the same as the first exept smaller */
 header h2 {
 
     position: relative;
@@ -128,6 +101,7 @@ header h2 {
 
 }
 
+/* The short little summery after the heading, adds a little padding for space */
 .summary {
 
     position: relative;
@@ -136,53 +110,58 @@ header h2 {
 
 }
 
+/* adjusting the font size of the summery */
 .summary p {
 
     text-align: center;
-    font-size: 1.5em;
-
-}
-
-/*surrounds .explanation .participation .benefits .requirements footer*/
-div.main {
-
-    position: relative;
-
-}
-
-/*These are all your major sub-elements, you can give a whole group of classes commands by grouping them separated by , */
-/*You can get more specific by styling the <p> tags or the <h3> tags or a specific <p> tag with a command like*/
-/*suppary p would style every <p> inside of summary */
-header,
-.summary,
-.preamble,
-.explanation,
-.participation,
-.benefits,
-.requirements,
-footer {
-
-    position: relative;
-
-}
-
-/*There are 6 extras at the very bottom of the page*/
-.extra1 {
-
-    /*code below will place element at top of page*/
-    /*
-  position:absolute;
-  top:0px;
-  width:image width;
-  height:image height;
-  */
-    position: relative;
+    font-size: 2em;
 
 }
 
 
-/* General styling for all dropdown sections */
-#zen-preamble,
+/* the main dropdown preamble section with background color, border, padding and height */
+#zen-preamble {
+    background-color: #F54927E6;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 30px auto;
+    padding: 15px;
+    width: 80%;
+    overflow: hidden;
+    max-height: 120px;
+    transition: max-height 0.7s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* the heading inside the preamble with font settings, color and text shadow */
+#zen-preamble > h3 {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 3px #fff;
+    margin-top: 0;
+}
+
+/* effect when hovering over the preamble, expands height and changes background color */
+#zen-preamble:hover {
+    max-height: 1000px;
+    background-color: #F54927;
+}
+
+/* paragraphs inside the preamble, initially hidden for fade-in effect */
+#zen-preamble > p {
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.4s ease;
+}
+
+/* paragraphs fade in when hovering over the preamble */
+#zen-preamble:hover p {
+    opacity: 1;
+}
+
+/* each supporting block with background, border, padding, and hover transition */
 #zen-supporting > div {
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid black;
@@ -190,46 +169,38 @@ footer {
     margin: 30px auto;
     padding: 15px;
     overflow: hidden;
-    max-height: 120px; /* slightly taller default height */
+    max-height: 120px;
     transition: max-height 0.7s ease, background-color 0.3s ease;
     cursor: pointer;
 }
 
-/* Headings inside sections */
-#zen-preamble > h3,
+/* headings inside the supporting blocks with font settings, color, and shadow */
 #zen-supporting > div h3 {
     font-size: 1.5em;
     color: black;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px 3px #fff;
-    margin-top: 0; /* ensures heading isn't clipped */
+    margin-top: 0;
 }
 
-/* Expand effect on hover */
-#zen-preamble:hover {
-    max-height: 1000px; /* large enough to fit all text */
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
+/* hover effect for supporting blocks, expands height and changes background */
 #zen-supporting > div:hover {
     max-height: 1000px;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Smooth text fade-in */
-#zen-preamble > p,
+/* paragraphs inside supporting blocks, initially hidden for fade-in effect */
 #zen-supporting > div p {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
-#zen-preamble:hover > p,
+/* paragraphs fade in when hovering over supporting blocks */
 #zen-supporting > div:hover p {
     opacity: 1;
 }
 
-/* Ensure consistent box sizing */
-#zen-preamble,
+/* ensures consistent box-sizing for layout blocks */
 #zen-explanation,
 #zen-participation,
 #zen-benefits,
@@ -237,47 +208,152 @@ footer {
     box-sizing: border-box;
 }
 
-/* --- First row --- */
-#zen-preamble {
-    float: left;
-    width: 48%;
-    margin-left: 2%;
-    clear: both; /* start first row */
-}
-
+/* first row layout, explanation section floated left with width and margin */
 #zen-explanation {
-    float: right;
-    width: 48%;
-    margin-right: 2%;
-}
-
-/* --- Second row --- */
-#zen-participation {
     float: left;
     width: 48%;
     margin-left: 2%;
-    clear: both; /* start new row */
-}
-
-#zen-benefits {
-    float: right;
-    width: 48%;
-    margin-right: 2%;
-}
-
-/* --- Third row (full width) */
-#zen-requirements {
-    float: none;
-    width: 80%;
-    margin: 30px auto;
     clear: both;
 }
 
-/* Clear floats in parent container */
-#zen-supporting::after {
+/* first row layout, participation section floated right with width and margin */
+#zen-participation {
+    float: right;
+    width: 48%;
+    margin-right: 2%;
+}
+
+/* second row layout, benefits section floated left with width and margin */
+#zen-benefits {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+    clear: both;
+}
+
+/* second row layout, requirements section floated right with width and margin */
+#zen-requirements {
+    float: right;
+    width: 48%;
+    margin-right: 2%;
+}
+
+/* font size and alignment for paragraphs inside preamble and supporting blocks */
+#zen-supporting > div p, #zen-preamble > p {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* footer styling with width, margin, background color, padding, and border radius */
+footer {
+    clear: both;
+    width: 30%;
+    margin: 30px auto;
+    text-align: center;
+    background-color: rgba(255, 244, 124, 0.851);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+
+/* styling links inside the footer with padding, color, font, and hover effect */
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* hover effect for footer links */
+footer a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* clearfix for the page wrapper */
+.page-wrapper::after {
     content: "";
     display: block;
     clear: both;
 }
 
+/* main design sections floated left with font size, margin, background, and border radius */
+#design-selection,
+#design-archives,
+#zen-resources {
+    float: left;
+    font-size: 1.5em;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #3498db80;
+    border-radius: 30px;
+}
 
+/* design selection block with padding and width */
+#design-selection {
+    padding-top: 1em;
+    width: 60%;
+}
+
+/* design archives block with padding and width */
+#design-archives {
+    text-align: center;
+    padding: 1em;
+    width: 20%;
+}
+
+/* resources block with padding and width */
+#zen-resources {
+    text-align: center;
+    padding: 1em;
+    width: 20%;
+}
+
+/* remove default list styling from design and resource lists */
+#design-selection ul,
+#design-archives ul,
+#zen-resources ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* spacing between list items in design selection */
+#design-selection ul li {
+    margin-bottom: 0.5em;
+}
+
+/* spacing between list items in archives and resources */
+#design-archives ul li,
+#zen-resources ul li {
+    margin-bottom: 1em;
+}
+
+/* links inside lists with block display, color, padding, and border radius */
+#design-selection ul li a,
+#design-archives ul li a,
+#zen-resources ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8em 1em;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/* hover effect for links inside lists */
+#design-selection ul li a:hover,
+#design-archives ul li a:hover,
+#zen-resources ul li a:hover {
+    background-color: #2980b9;
+}
+
+/* page wrapper relative positioning with bottom margin */
+.page-wrapper {
+    position: relative;
+    margin-bottom: 3em;
+}
