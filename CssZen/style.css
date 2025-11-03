@@ -37,6 +37,9 @@ html {
 body {
 
     position: relative;
+    background-image: url(images/CSSZenBackround.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
@@ -105,13 +108,31 @@ header h1 {
     font-weight: 900;
     font-size: 70;
     color: black;
+    background-color: rgb(224, 255, 166);
+    border-radius: 20px;
     
 }
 
 header h2 {
 
     position: relative;
+    box-shadow: 2px 2px 5px 1px black;
     text-align: center;
+    font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 70;
+    color: black;
+    background-color: rgb(224, 255, 166);
+    border-radius: 20px;
+    width: 400px;
+    margin: auto;
+
+}
+
+.summary {
+
+    position: relative;
+    padding-bottom: 50px;
 
 }
 
@@ -153,9 +174,41 @@ footer {
 
 }
 
-.summary {
 
-    width: 50%;
-    margin: auto;
 
+#zen-supporting > div {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px;
+    overflow: hidden;
+    max-height: 60px; /* only show the title area */
+    transition: max-height 0.7s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Style for section headings */
+#zen-supporting > div h3 {
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+/* When you hover, expand to show all content */
+#zen-supporting > div:hover {
+    max-height: 1000px; /* plenty of room to show all text */
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Optional: smooth text fade-in when expanded */
+#zen-supporting > div p {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#zen-supporting > div:hover p {
+    opacity: 1;
 }
