@@ -86,14 +86,13 @@ abbr {
 section.intro {
 
     position: relative;
-    border: 1px black solid;
 
 }
 
 header {
 
     position: relative;
-    width: 600px;
+    width: 800px;
     margin: auto;
 
 }
@@ -103,7 +102,7 @@ header h1 {
     position: relative;
     box-shadow: 2px 2px 5px 1px black;
     text-align: center;
-    font-size: 4em;
+    font-size: 5em;
     font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
     font-weight: 900;
     font-size: 70;
@@ -120,11 +119,11 @@ header h2 {
     text-align: center;
     font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
     font-weight: 900;
-    font-size: 70;
+    font-size: 2em;
     color: black;
     background-color: rgb(224, 255, 166);
     border-radius: 20px;
-    width: 400px;
+    width: 500px;
     margin: auto;
 
 }
@@ -133,6 +132,14 @@ header h2 {
 
     position: relative;
     padding-bottom: 50px;
+    margin: auto;
+
+}
+
+.summary p {
+
+    text-align: center;
+    font-size: 1.5em;
 
 }
 
@@ -140,7 +147,6 @@ header h2 {
 div.main {
 
     position: relative;
-    border: 2px black solid;
 
 }
 
@@ -175,40 +181,103 @@ footer {
 }
 
 
-
+/* General styling for all dropdown sections */
+#zen-preamble,
 #zen-supporting > div {
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid black;
     border-radius: 15px;
-    width: 80%;
     margin: 30px auto;
     padding: 15px;
     overflow: hidden;
-    max-height: 60px; /* only show the title area */
+    max-height: 120px; /* slightly taller default height */
     transition: max-height 0.7s ease, background-color 0.3s ease;
     cursor: pointer;
 }
 
-/* Style for section headings */
+/* Headings inside sections */
+#zen-preamble > h3,
 #zen-supporting > div h3 {
     font-size: 1.5em;
     color: black;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px 3px #fff;
+    margin-top: 0; /* ensures heading isn't clipped */
 }
 
-/* When you hover, expand to show all content */
-#zen-supporting > div:hover {
-    max-height: 1000px; /* plenty of room to show all text */
+/* Expand effect on hover */
+#zen-preamble:hover {
+    max-height: 1000px; /* large enough to fit all text */
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Optional: smooth text fade-in when expanded */
+#zen-supporting > div:hover {
+    max-height: 1000px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Smooth text fade-in */
+#zen-preamble > p,
 #zen-supporting > div p {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
+#zen-preamble:hover > p,
 #zen-supporting > div:hover p {
     opacity: 1;
 }
+
+/* Ensure consistent box sizing */
+#zen-preamble,
+#zen-explanation,
+#zen-participation,
+#zen-benefits,
+#zen-requirements {
+    box-sizing: border-box;
+}
+
+/* --- First row --- */
+#zen-preamble {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+    clear: both; /* start first row */
+}
+
+#zen-explanation {
+    float: right;
+    width: 48%;
+    margin-right: 2%;
+}
+
+/* --- Second row --- */
+#zen-participation {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+    clear: both; /* start new row */
+}
+
+#zen-benefits {
+    float: right;
+    width: 48%;
+    margin-right: 2%;
+}
+
+/* --- Third row (full width) */
+#zen-requirements {
+    float: none;
+    width: 80%;
+    margin: 30px auto;
+    clear: both;
+}
+
+/* Clear floats in parent container */
+#zen-supporting::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
