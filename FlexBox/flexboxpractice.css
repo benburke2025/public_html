@@ -1,0 +1,30 @@
+body {
+
+    font: 1.2em / 1.5 sans-serif;
+
+}
+
+.container {
+
+    width: 1000px;
+    margin: auto;
+
+}
+
+/* Task 1 Original CSS with no flexbox */
+.task1Div {
+
+    width: 200px;
+    height: 50px;
+    border: 2px black solid;
+    margin: 5px;
+
+}
+
+/* Task 1 CSS with flexbox integration */
+.holdingDivTask1 {
+
+    display: flex;
+    justify-content: space-between;
+
+}
