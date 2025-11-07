@@ -1,23 +1,18 @@
 body {
 
     font: 1.2em / 1.5 sans-serif;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10px;
+    border: 1px solid black;
 
 }
 
-.container {
-
-    width: 1000px;
-    margin: auto;
-    padding: 15px;
-    border: 2px black solid;
-    border-radius: 20px;
-
-}
 
 /* Task 1 Original CSS with no flexbox */
 .task1Div {
 
-    width: 200px;
+    width: 25%;
     height: 50px;
     border: 2px black solid;
     margin: 5px;
@@ -32,14 +27,26 @@ body {
 
 }
 
+/* Task 2 Original CSS with no flexbox */
 .task2Div {
 
-    width: 990px;
-    padding: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 94%;
     border: 1px black solid;
 
 }
 
+/* CSS for the text on task 2 */
+.task2Text {
+
+    text-align: center;
+
+}
+
+/* Colors set to id for text in task 2 */
 #red {
 
     background-color: red;
@@ -58,8 +65,9 @@ body {
 
 }
 
+/* Task 2 CSS with flexbox integration */
 .holdingDivTask2 {
-
+    
     display: flex;
     height: 400px;
     align-items: stretch;
