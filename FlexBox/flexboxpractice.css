@@ -34,7 +34,8 @@ body {
 
 .task2Div {
 
-    width: 1000px;
+    width: 990px;
+    padding: 10px;
     border: 1px black solid;
 
 }
