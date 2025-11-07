@@ -8,6 +8,9 @@ body {
 
     width: 1000px;
     margin: auto;
+    padding: 15px;
+    border: 2px black solid;
+    border-radius: 20px;
 
 }
 
@@ -26,5 +29,38 @@ body {
 
     display: flex;
     justify-content: space-between;
+
+}
+
+.task2Div {
+
+    width: 1000px;
+    border: 1px black solid;
+
+}
+
+#red {
+
+    background-color: red;
+
+}
+
+#green {
+
+    background-color: green;
+
+}
+
+#blue {
+
+    background-color: blue;
+
+}
+
+.holdingDivTask2 {
+
+    display: flex;
+    height: 400px;
+    align-items: stretch;
 
 }
