@@ -83,8 +83,9 @@ body {
 
 }
 
-.holdingDivTask3NoFlex p{
+.holdingDivTask3NoFlex {
 
-    float: right;
+    display: flex;
+    flex-direction: column;
 
 }
