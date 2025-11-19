@@ -1,0 +1,33 @@
+/* remove padding around header image */
+.header {
+
+    padding: 0px;
+
+}
+
+/* sidenav background color */
+.bg-sidenav {
+
+    background-color: #3F6B90;
+
+}
+
+/* style sidenav area */
+.nav-link {
+
+    color: #D9E4EE;
+
+}
+
+.nav-link:hover {
+
+    color: #CCCCCC;
+
+}
+
+/* style main content area */
+main {
+
+    background-color: #FDFFFE;
+
+}
