@@ -1,33 +1,68 @@
-/* remove padding around header image */
-.header {
-
-    padding: 0px;
-
+/* header spacing */
+.header{
+    padding:0;
 }
 
-/* sidenav background color */
-.bg-sidenav {
-
-    background-color: #3F6B90;
-
+/* top nav bg */
+.navbar{
+    background-color:#212529;
 }
 
-/* style sidenav area */
-.nav-link {
-
-    color: #D9E4EE;
-
+/* sidebar bg */
+.bg-sidenav{
+    background-color:#3F6B90;
 }
 
-.nav-link:hover {
-
-    color: #CCCCCC;
-
+/* sidebar links */
+.bg-sidenav .nav-link{
+    color:#D9E4EE;
+}
+.bg-sidenav .nav-link:hover{
+    color:#CCCCCC;
 }
 
-/* style main content area */
-main {
+/* main bg */
+main{
+    background-color:#FDFFFE;
+}
 
-    background-color: #FDFFFE;
+/* footer bg */
+.footer-row{
+    background-color:#212529;
+}
 
+
+/* rgb boxes - make perfect square */
+.rgb-box {
+    width: 100%;
+    padding-top: 100%; /* height = width */
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* content inside each rgb box */
+.rgb-box-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 1rem;
+}
+
+/* optional background colors for each section */
+#red { background-color: #ffdddd; }
+#green { background-color: #ddffdd; }
+#blue { background-color: #ddddff; }
+
+/* header inside rgb boxes */
+.rgb-box h4 {
+    margin-top: 0;
+}
+
+/* small spacing for buttons inside rgb boxes */
+.rgb-box a {
+    margin-right: 0.5rem;
 }
