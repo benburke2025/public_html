@@ -11,13 +11,75 @@
 
 	<h1>Welcome to my website</h1>
 
+	<br>
+
 	<div class="content">
-		
+
+		<div id="clock">8:10:45</div>
+
+		<script>
+
+			setInterval(showTime, 1000);
+			function showTime() {
+				let time = new Date();
+				let hour = time.getHours();
+				let min = time.getMinutes();
+				let sec = time.getSeconds();
+				am_pm = "AM";
+
+				// Setting time for 12 Hrs format
+				if (hour >= 12) {
+					if (hour > 12) hour -= 12;
+					am_pm = "PM";
+				} else if (hour == 0) {
+					hr = 12;
+					am_pm = "AM";
+				}
+
+				hour =
+					hour < 10 ? "0" + hour : hour;
+				min = min < 10 ? "0" + min : min;
+				sec = sec < 10 ? "0" + sec : sec;
+
+				let currentTime =
+					hour +
+					":" +
+					min +
+					":" +
+					sec +
+					am_pm;
+
+				// Displaying the time
+				document.getElementById(
+					"clock"
+				).innerHTML = currentTime;
+			}
+
+			showTime();
+
+			// Code to change the buttons backround color
+			function changeBgColor(color) {
+				document.getElementById("myDiv").style.backgroundColor = color; 
+			}
+			
+
+		</script>
+
+		<br>
+
+		<div class="buttonTime">
+
+			<button type="button" id="button" onclick="changeBgColor('orange')">Click me!</button>
+
+		</div>
+
+
+
 		<table>
 
 			<tr>
 
-				<th colspan="3" style="font-size: 30; background-color: rgb(255, 196, 87); border: 3px black solid;">
+				<th colspan="3" style="font-size: 30; background-color: rgb(255, 196, 87); border: 3px black solid">
 					Assignments Table</th>
 
 			</tr>
@@ -89,7 +151,7 @@
 				<td>Five Page Website</td>
 				<td><a href="FivePage/home.html">Here</a></td>
 				<td>10/6/25</td>
-				 
+
 			</tr>
 
 			<tr>
