@@ -87,3 +87,26 @@ a:visited {
     float: right;
 
 }
+
+#clock {
+
+    background-color: rgb(255, 0, 0, 0.3);
+    width: 300px;
+    font-size: 40;
+    text-align: center;
+    margin: auto;
+    border-radius: 100px;
+
+}
+
+.buttonTime {
+
+    text-align: center;
+
+}
+
+#button {
+
+    font-size: 30;
+
+}
