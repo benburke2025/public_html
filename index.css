@@ -283,3 +283,29 @@ a {
         transition: none;
     }
 }
+
+/* Clock decorative overlay and document.write demo frame */
+.clock-wrap.clock-overlay {
+    box-shadow: 0 12px 40px rgba(255, 200, 120, 0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.02));
+    border-color: rgba(255, 210, 140, 0.14);
+}
+.clock-wrap.clock-overlay .clock {
+    text-shadow: 0 6px 22px rgba(255, 190, 110, 0.16);
+}
+
+.doc-write-area {
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(74,47,18,0.12);
+    width: 100%;
+    max-width: 560px;
+    height: 140px;
+    display: none;
+}
+.doc-write-area iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

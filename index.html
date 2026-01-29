@@ -1,133 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Ben Burke</title>
 	<link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
+
 	<header class="site-header">
+
 		<div class="container header-flex">
+
 			<div class="header-text">
+
 				<h1 class="title">Welcome to my website</h1>
 
 				<div class="header-actions">
+
 					<div class="widgets-row">
+
 						<div class="clock-wrap" aria-label="Current time">
+
 							<span class="clock-label">Local time</span>
 							<div id="clock" class="clock">--:--:-- --</div>
+
 						</div>
 
 						<div class="timer-wrap">
+
 							<button type="button" id="button" class="btn btn--sm">Start 10s timer</button>
 							<span id="timer" class="timer" aria-live="polite"></span>
+
 						</div>
+
 					</div>
 
 					<div class="image-toggle-row">
+
 						<button type="button" id="toggleImage" class="btn btn--lg btn--row">Image swap</button>
 						<button type="button" class="btn btn--lg btn--row">Button 2</button>
 						<button type="button" class="btn btn--lg btn--row">Button 3</button>
 						<button type="button" class="btn btn--lg btn--row">Button 4</button>
 						<button type="button" class="btn btn--lg btn--row">Button 5</button>
+
 					</div>
+
 				</div>
+
 			</div>
 
 			<aside class="header-card" aria-label="Image">
+
 				<div class="header-image" aria-hidden="true"></div>
+
 			</aside>
+
 		</div>
+
 	</header>
 
 	<main class="container">
+
 		<section id="projects" class="section">
+
 			<div class="panel">
+
 				<div class="section-head">
+
 					<h2>Projects</h2>
-					<p>Everything below links to the original folders so nothing breaks.</p>
+
 				</div>
 
 				<div class="project-grid">
+
 					<a class="project-card" href="ThreePage/red.html">
+
 						<div class="project-title">Three Page Website</div>
 						<div class="project-meta">9/12/25</div>
+
 					</a>
 
 					<a class="project-card" href="FivePage/template.html">
+
 						<div class="project-title">Five Page Template</div>
 						<div class="project-meta">9/23/25</div>
 					</a>
-
+					
 					<a class="project-card" href="BasicForm/basicform.html">
+
 						<div class="project-title">Basic Forms Website</div>
 						<div class="project-meta">9/23/25</div>
+
 					</a>
 
 					<a class="project-card" href="BasicForm/AnimalSounds.html">
+
 						<div class="project-title">Animal Sounds Website</div>
 						<div class="project-meta">9/23/25</div>
+
 					</a>
 
 					<a class="project-card" href="FivePage/tablespractice.html">
+
 						<div class="project-title">Tables Practice Website</div>
 						<div class="project-meta">10/2/25</div>
+
 					</a>
 
 					<a class="project-card" href="FivePage/home.html">
+
 						<div class="project-title">Five Page Website</div>
 						<div class="project-meta">10/6/25</div>
+
 					</a>
 
 					<a class="project-card" href="PseudoElements/index.html">
+
 						<div class="project-title">Pseudo Elements Website</div>
 						<div class="project-meta">10/21/25</div>
+
 					</a>
 
 					<a class="project-card" href="FivePageAnimated/home.html">
 						<div class="project-title">Five Page Animated Website</div>
 						<div class="project-meta">10/22/25</div>
+
 					</a>
 
 					<a class="project-card" href="CssZen/index.html">
+
 						<div class="project-title">CSS Zen Garden</div>
 						<div class="project-meta">10/27/25</div>
+
 					</a>
 
 					<a class="project-card" href="FlexBox/">
+
 						<div class="project-title">FlexBox Practice</div>
 						<div class="project-meta">11/6/25</div>
+
 					</a>
 
 					<a class="project-card" href="Bootstrap/">
+
 						<div class="project-title">Bootstrap</div>
 						<div class="project-meta">Date unknown</div>
+
 					</a>
 
 					<a class="project-card" href="Breakout/">
+
 						<div class="project-title">JS Breakout</div>
 						<div class="project-meta">1/6/26</div>
+
 					</a>
 
 					<a class="project-card" href="Asteroids/">
+
 						<div class="project-title">JavaScript Asteroids</div>
 						<div class="project-meta">1/23/26</div>
+
 					</a>
+
 				</div>
+
 			</div>
+
 		</section>
 
 		<footer class="footer">
+
 			<p>Made by Ben • <span id="year"></span></p>
+
 		</footer>
+
 	</main>
 
 	<script>
 		// Live clock
 		function showTime() {
+
 			const time = new Date();
 			let hour = time.getHours();
 			let min = time.getMinutes();
@@ -135,10 +192,17 @@
 			let am_pm = "AM";
 
 			if (hour >= 12) {
+
 				am_pm = "PM";
+
 				if (hour > 12) hour -= 12;
-			} else if (hour === 0) {
+
+			}
+
+			else if (hour === 0) {
+
 				hour = 12;
+
 			}
 
 			const hh = hour < 10 ? "0" + hour : "" + hour;
@@ -147,6 +211,7 @@
 
 			document.getElementById("clock").textContent = `${hh}:${mm}:${ss} ${am_pm}`;
 		}
+
 		showTime();
 		setInterval(showTime, 1000);
 
@@ -156,6 +221,7 @@
 		let timerInterval = null;
 
 		function startTenSecondTimer() {
+
 			if (timerInterval) return;
 
 			let remaining = 10;
@@ -165,16 +231,21 @@
 
 			timerInterval = setInterval(() => {
 				remaining -= 1;
+
 				if (remaining <= 0) {
+
 					clearInterval(timerInterval);
 					timerInterval = null;
 					timerEl.textContent = "Done!";
 					buttonEl.disabled = false;
 					buttonEl.textContent = "Start 10s timer";
 					return;
+
 				}
+
 				timerEl.textContent = `${remaining}s`;
 			}, 1000);
+
 		}
 
 		buttonEl.addEventListener("click", startTenSecondTimer);
@@ -187,18 +258,25 @@
 		let showingB = false;
 
 		function updateHeaderImage() {
+
 			headerImageEl.style.backgroundImage = `url(${showingB ? imageB : imageA})`;
 			toggleImageBtn.setAttribute("aria-pressed", showingB ? "true" : "false");
+			
 		}
 
 		toggleImageBtn.addEventListener("click", () => {
+
 			showingB = !showingB;
 			updateHeaderImage();
+
 		});
+
 		updateHeaderImage();
 
 		document.getElementById("year").textContent = new Date().getFullYear();
+
 	</script>
+	
 </body>
 
 </html>
