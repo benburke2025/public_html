@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: #006064; /* Dark Cyan text */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    
+    /* COLORFUL BACKGROUND: Sky Blue with Light Green Dots */
+    background-color: #e1f5fe; /* Sky Blue Base */
+    background-image: radial-gradient(#b9f6ca 20%, transparent 20%); /* Light Green Dots */
+    background-size: 30px 30px; /* Size of the pattern */
+    background-attachment: fixed; /* Keeps background static while scrolling */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.site-header {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+/* The "Rounded Border Background" Box */
+.header-card {
+    padding: 40px 20px;
+    border: 1px solid rgba(0, 151, 167, 0.25); /* Sky Blue Border */
+    border-radius: 24px; /* Rounded Corners */
+    background: rgba(255, 255, 255, 0.55); /* Semi-transparent White */
+    backdrop-filter: blur(5px); /* Glass effect */
+    box-shadow: 0 10px 30px rgba(0, 96, 100, 0.1); /* Soft Shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* --- STARTUP ANIMATION (Header) --- */
+    opacity: 0; /* Start invisible */
+    animation: fadeInUp 1s ease-out 0.2s forwards; /* 0.3s Delay */
+}
+
+.title {
+    margin: 0;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #0277bd; /* Stronger Sky Blue */
+    text-shadow: 2px 2px 0px #b9f6ca; /* Green shadow for pop */
+}
+
+/* --- Home Button Styles --- */
+.header-actions {
+    margin-top: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    background-color: #ffffff; /* White background */
+    color: #0277bd; /* Sky Blue text */
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid #b9f6ca; /* Light Green border */
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.home-btn:hover {
+    background-color: #e0f7fa; /* Light Sky Blue on hover */
+    border-color: #4dd0e1; /* Brighter Blue border on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Main Content --- */
+.section {
+    padding: 20px 0 60px;
+}
+
+/* Panel with Glassmorphism */
+.panel {
+    padding: 30px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 96, 100, 0.1);
+
+    /* --- STARTUP ANIMATION (Panel) --- */
+    opacity: 0; /* Start invisible */
+    animation: fadeInUp 1s ease-out 0.4s forwards; /* 0.8s Delay */
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-head h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #006064;
+}
+
+/* --- Project Grid --- */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+    border-radius: 20px;
+    /* White card with slight transparency */
+    background: rgba(255, 255, 255, 0.9); 
+    border: 2px solid #e0f7fa;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    flex: 1 1 200px; /* Responsive cards */
+    max-width: 260px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #4dd0e1; /* Sky Blue border */
+    box-shadow: 0 10px 20px rgba(77, 208, 225, 0.3);
+    background: #ffffff;
+}
+
+.project-title {
+    font-weight: 800;
+    font-size: 18px;
+    color: #01579b; /* Dark Blue */
+}
+
+.project-meta {
+    font-size: 14px;
+    color: #2e7d32; /* Green for meta */
+    font-weight: 600;
+    background: #e8f5e9;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 20px 0 40px;
+    text-align: center;
+    color: #006064;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* --- Animation Definition --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 600px) {
+    .title {
+        font-size: 36px;
+    }
+    
+    .panel {
+        padding: 20px;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        flex-direction: row; /* Horizontal cards on mobile */
+        justify-content: space-between;
+        text-align: left;
+        padding: 16px 20px;
+    }
+}
