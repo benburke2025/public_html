@@ -1,0 +1,49 @@
+body { 
+
+    font-family: sans-serif; 
+    padding: 20px; 
+    background: #f4f4f9; 
+
+}
+
+.container { 
+    
+    max-width: 600px; 
+    margin: 0 auto; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+}
+
+h1 { 
+    
+    text-align: center; 
+    color: #333; 
+
+}
+
+.stat-box { 
+    
+    border-bottom: 1px solid #eee; 
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: space-between; 
+
+}
+
+.label { 
+    
+    font-weight: bold; 
+    color: #555; 
+
+}
+
+.value { 
+    
+    color: #007bff; 
+    font-family: monospace; 
+    font-size: 1.1em; 
+
+}

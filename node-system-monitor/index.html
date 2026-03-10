@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>System Monitor</h1>
+
+        <div class="stat-box">
+
+            <span class="label">Platform:</span>
+            <span class="value" id="platform">Loading...</span>
+
+        </div>
+
+        <div class="stat-box">
+
+            <span class="label">CPU Count:</span>
+            <span class="value" id="cpuCount">Loading...</span>
+
+        </div>
+
+        <div class="stat-box">
+
+            <span class="label">Total Memory:</span>
+            <span class="value" id="totalMem">Loading...</span>
+
+        </div>
+
+        <div class="stat-box">
+
+            <span class="label">CPU Usage:</span>
+            <span class="value" id="cpuUsage">Loading...</span>
+
+        </div>
+
+        <div class="stat-box">
+
+            <span class="label">Free Memory:</span>
+            <span class="value" id="freeMem">Loading...</span>
+
+        </div>
+
+        <div class="stat-box">
+
+            <span class="label">System Uptime:</span>
+            <span class="value" id="uptime">Loading...</span>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Function to fetch data from the server
+        async function updateStats() {
+
+            try {
+
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+
+                // Update the HTML elements with the data
+                document.getElementById('platform').innerText = data.platform;
+                document.getElementById('cpuCount').innerText = data.cpuCount;
+                document.getElementById('totalMem').innerText = data.totalMemory;
+                document.getElementById('cpuUsage').innerText = data.cpuUsage;
+                document.getElementById('freeMem').innerText = data.freeMemory;
+                document.getElementById('uptime').innerText = data.uptime;
+
+                console.log("Updated:", data); // Keep logging to console if you wish
+
+            } catch (error) {
+
+                console.error("Error fetching stats:", error);
+
+            }
+
+        }
+
+        // Run immediately on load
+        updateStats();
+
+        // Run every 3 seconds (matching your original setInterval)
+        setInterval(updateStats, 3000);
+
+    </script>
+
+</body>
+
+</html>
